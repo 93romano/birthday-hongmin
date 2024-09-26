@@ -2,15 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-    <h1>happy birthday</h1>
-    <img src="./assets/KakaoTalk_Photo_2024-09-25-00-15-38-25.jpeg" alt="">
+    <div class="birthdayCard">
+        <div class="cardFront">
+
+            <h2 class="happy nanum-pen-script-regular">
+                똑!똑! 편지왔어여!
+            </h2>
+
+            <div class="hong-cute">
+            </div>
+        </div>
+        <div class="cardInside nanum-pen-script-regular">
+            <div>
+                <h3 class="back">콩민아 31번째 생일 축하해!</h3>
+                <p>앞으로 <span class="underline">뒷삭 금지!</span> <span class="underline">손절 금지!</span> <span
+                        class="underline">방
+                        나가기 금지!</span> 이구</p>
+                <p>오늘은 야무지게 재밌게 놀자</p>
+            </div>
+            <div class="image">
+            </div>
+            <p>쪼이 리즈 제이스 마노 승렬이가</p>
+            <p>p.s 이런 애들 없다~ 증말로~</p>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="assets/hong.mp3" type="audio/mp3" />
+        <!-- 필요하다면, 다른 형식(.ogg, .mp3)도 추가할 수 있음 -->
+        Your browser does not support the audio element.
+    </audio>
+    <script src="./main.js"></script>
 </body>
 
 </html>

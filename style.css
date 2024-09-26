@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    background-color: #239ac2;
+  }
+
+  .birthdayCard {
+    position: relative;
+    width: 63%;
+    height: 85%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px) scale(1);
+    transition: 1s;
+  }
+  
+  .birthdayCard.open {
+    transform: perspective(2500px) rotate(5deg) scale(1.2);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+      0 10px 100px rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .birthdayCard.open .cardFront {
+    transform: rotateY(-160deg);
+  }
+  
+  .birthdayCard.open .happy {
+    visibility: hidden;
+  }
+  
+  .cardFront {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+      30px 0 50px rgba(0, 0, 0, 0.4);
+    transition: 0.6s;
+  }
+  
+  .happy {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    margin: 30px;
+    transition: 0.1s;
+  }
+
+  .hong-cute {
+      width: 100%;
+      flex-grow: 1;
+      background-image: url("assets/hong_solo.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: center;
+  }
+  
+  .cardInside {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .birthdayCard.open .cardInside {
+    width: 120%;
+    background-color: black;
+  }
+  
+  h3, p {
+    line-height: 130%;
+    color: #fff;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 0;
+    font-size: 1rem;
+
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .cardInside .image {
+    flex-grow: 0.9;
+    /* background-image: url("assets/we.webp"); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    transition: opacity 1.5s ease-in-out; /* 애니메이션 효과 */
+    opacity: 0; /* 처음에 투명하게 시작 */
+  }
+  
+  .cardInside .image.visible {
+    opacity: 1; /* visible 클래스가 추가되면 불투명해지면서 페이드인 */
+}
+
+  .name {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    color: #333;
+  }
+
+
+@media(min-width: 800px) {
+  .birthdayCard {
+    position: relative;
+    width: 400px;
+    height: 560px;
+  }
+  
+  p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+}
+
+.nanum-pen-script-regular {
+  font-family: "Nanum Pen Script","Brush Script MT", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+p span.underline {
+  text-decoration: underline;
+}
